@@ -1,56 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Core Flow Animations</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin: 30px;
+      margin: 20px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
     }
 
     .video-container {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       gap: 20px;
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
     }
 
+    /* Left video: 70% */
     .video-box-left {
       flex: 7;
       min-width: 0;
     }
 
+    /* Right video: 30% */
     .video-box-right {
       flex: 3;
       min-width: 0;
     }
 
     video {
+      display: block;
       width: 100%;
       height: auto;
+      border-radius: 5px;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 768px) {
+      .video-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .video-box-left,
+      .video-box-right {
+        width: 100%;
+        flex: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <h2>Core Surface Flow GJI2023 (1982–2019)</h2>
 
   <div class="video-container">
 
+    <!-- Left: Flow map -->
     <div class="video-box-left">
       <h3>Flow map</h3>
+
       <video controls autoplay muted loop playsinline>
-        <source src="animation_dBr_mean.mp4" type="video/mp4">
+        <source src="animation_dBr_mean.mp4"
+                type="video/mp4">
+        Your browser does not support HTML5 video.
       </video>
     </div>
 
+    <!-- Right: Zonal flow -->
     <div class="video-box-right">
       <h3>Zonal flow</h3>
+
       <video controls autoplay muted loop playsinline>
-        <source src="zonal_animation.mp4" type="video/mp4">
+        <source src="zonal_animation.mp4"
+                type="video/mp4">
+        Your browser does not support HTML5 video.
       </video>
     </div>
 
