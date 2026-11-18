@@ -1,9 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Core Flow Animations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 30px;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .video-box {
+      width: 48%;
+      min-width: 320px;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
 <body>
-  <h2>Core Surface Flow Animation</h2>
-  <video width="800" controls loop>
-    <source src="./animation_Br_mean.mp4" type="video/mp4">
-  </video>
+
+  <h2>Core Surface Flow GJI2023 (1982–2019)</h2>
+
+  <div class="video-container">
+
+    <div class="video-box">
+      <h3>Flow map</h3>
+      <video controls autoplay muted loop playsinline>
+        <source src="animation_dBr_mean.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="video-box">
+      <h3>Zonal flow</h3>
+      <video controls autoplay muted loop playsinline>
+        <source src="zonal_animation.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
 </body>
 </html>
