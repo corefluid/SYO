@@ -14,13 +14,18 @@
     .video-container {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 20px;
-      flex-wrap: wrap;
     }
 
-    .video-box {
-      width: 48%;
-      min-width: 320px;
+    .video-box-left {
+      flex: 7;
+      min-width: 0;
+    }
+
+    .video-box-right {
+      flex: 3;
+      min-width: 0;
     }
 
     video {
@@ -35,14 +40,14 @@
 
   <div class="video-container">
 
-    <div class="video-box">
+    <div class="video-box-left">
       <h3>Flow map</h3>
       <video controls autoplay muted loop playsinline>
         <source src="animation_dBr_mean.mp4" type="video/mp4">
       </video>
     </div>
 
-    <div class="video-box">
+    <div class="video-box-right">
       <h3>Zonal flow</h3>
       <video controls autoplay muted loop playsinline>
         <source src="zonal_animation.mp4" type="video/mp4">
